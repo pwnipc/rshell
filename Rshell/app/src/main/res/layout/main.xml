@@ -1,24 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:orientation="vertical"
 	android:gravity="center">
 
-	<EditText
+	<TextView
 		android:id="@+id/enterCmd"
-		android:layout_width="wrap_content"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:textAlignment="center"
+		android:text="Enter a System Commaand"/>
+
+	<EditText
+		android:layout_width="fill_parent"
 		android:ems="10"
 		android:layout_height="wrap_content"
-		android:hint="Enter a System Commaand"/>
+		android:id="@+id/inP"/>
 
 	<Button
-		android:layout_width="wrap_content"
-		style="?android:attr/buttonStyleSmall"
+		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:text="Run"
 		android:onClick="execute"
-		android:layout_below="@id/enterCmd"/>
+		android:id="@+id/run"/>
 
-</RelativeLayout>
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/outp"
+		android:textAlignment="textStart"/>
+
+</LinearLayout>
 
